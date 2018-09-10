@@ -50,6 +50,9 @@ class Meal {
   deliveries(){
     return store.deliveries.filter(function(x){return x.mealId === this.id}.bind(this))
   }
+  customers() {
+    return this.deliveries().map(function(x){return x.customer()})
+  }
 }
 
 
