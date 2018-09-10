@@ -80,7 +80,7 @@ class Delivery {
 
 
   meal() {
-    return store.meals.find(function(x){return x.id === this.mealId}.bind(this))
+    return store.meals.find(function(x){return x.id === this.mealId}.bind(this)).unique
   }
 
   customer() {
