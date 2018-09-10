@@ -38,7 +38,7 @@ class Customer {
   }
 
   meals() {
-    return this.deliveries().map(function(x){return x.meal()})
+    return this.deliveries().map(function(x){return x.meal()}).filter(function(v,i,arr){ return i==arr.indexOf(v); })
   }
 
   totalSpent() {
