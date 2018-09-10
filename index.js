@@ -28,6 +28,10 @@ class Customer {
     this.id = customerId++
     store.customers.push(this)
   }
+
+  deliveries() {
+    return store.deliveries.filter(function(x){return x.customerId === this.id}.bind(this))
+  }
 }
 
 
