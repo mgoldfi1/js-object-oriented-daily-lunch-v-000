@@ -36,6 +36,14 @@ class Customer {
   meals() {
     return this.deliveries().map(function(x){return x.meal()})
   }
+
+  totalSpent() {
+    let agg = 0
+    for (const meal of this.meals()) {
+      agg = agg + meal.price
+    }
+    return agg
+  }
 }
 
 
@@ -55,7 +63,7 @@ class Meal {
   }
 
   static byPrice() {
-    
+
     return store.meals.sort(function(a,b){return b.price - a.price})
   }
 }
