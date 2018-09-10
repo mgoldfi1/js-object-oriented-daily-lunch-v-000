@@ -4,6 +4,10 @@ let mealId = 0
 let deliveryId = 0
 let neighborhoodId = 0
 let customerId = 0
+
+const unique = (value, index, self) => {
+    return self.indexOf(value) === index;
+}
 class Neighborhood {
   constructor(name){
     this.name = name
@@ -21,7 +25,7 @@ class Neighborhood {
   }
 
   meals() {
-    return this.deliveries().map(function(x){return x.meal()})
+    return this.deliveries().map(function(x){return x.meal()}).filter(unique)
   }
 }
 
