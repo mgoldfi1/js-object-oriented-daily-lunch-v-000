@@ -10,6 +10,16 @@ class Neighborhood {
     this.id = neighborhoodId++
     store.neighborhoods.push(this)
   }
+
+
+  deliveries() {
+    return store.deliveries.filter(function(x){return x.neighborhoodId === this.id}.bind(this))
+  }
+
+
+
+
+
 }
 
 class Customer {
