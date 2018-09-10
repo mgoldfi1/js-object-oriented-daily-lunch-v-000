@@ -59,7 +59,7 @@ class Delivery {
   }
 
   customer() {
-    return store.customer.find(function(x){return x.id === this.customerId}.bind(this))
+    return store.customers.find(function(x){return x.id === this.customerId}.bind(this))
   }
 
 
