@@ -62,5 +62,9 @@ class Delivery {
     return store.customers.find(function(x){return x.id === this.customerId}.bind(this))
   }
 
+  neighborhood() {
+    return store.neighborhoods.find(function(x){return x.id === this.neighborhoodId}.bind(this))
+  }
+
 
 }
