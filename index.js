@@ -19,6 +19,10 @@ class Neighborhood {
   customers() {
     return store.customers.filter(function(x){return x.neighborhoodId === this.id}.bind(this))
   }
+
+  meals() {
+    return this.deliveries().map(function(x){return x.meal()})
+  }
 }
 
 class Customer {
