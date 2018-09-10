@@ -21,7 +21,7 @@ class Neighborhood {
   }
 
   meals() {
-    return this.deliveries().map(function(x){return x.meal()}).uniq()
+    return this.deliveries().map(function(x){return x.meal()}).uniqe()
   }
 }
 
